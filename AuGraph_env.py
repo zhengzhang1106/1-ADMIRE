@@ -102,7 +102,7 @@ class AuGraphEnv(gym.Env):
                 'request_traffic': np.array(request_traffic, dtype=np.float32)
             }
             reward = (AuGraphEnv.wavelength_last - wave_used) * 50   # 新增加波长的负值，有博客说reward在0-1之间比较好，
-            print('id',request_index_current,'weight',action_t,"wave_last", AuGraphEnv.wavelength_last, "wave_cur", wave_used, "reward", reward,)
+            print('id',request_index_current,'weight',action_t,"wave_last", AuGraphEnv.wavelength_last, "wave_cur", wave_used, "reward", reward)
             AuGraphEnv.wavelength_last = wave_used  # 更新wavelength_last
         else:  # 选路失败不更新物理网络状态和业务
             if request_index_current == Database.job_number - 1:  # 所有业务都部署完成，结束此次迭代

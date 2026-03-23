@@ -52,6 +52,21 @@ try:
             'seed': seed_num,
             'num_gpus': 0,
 
+            "use_state_preprocessor": True,
+            "actor_hiddens": [128, 64],
+            "actor_hidden_activation": "relu",
+            "critic_hiddens": [128, 64],
+            "critic_hidden_activation": "relu",
+            "n_step": 1,
+
+            'model': {
+                'custom_model': 'augraph_model',
+                'conv_filters': [[36, [3, 3], 1], [18, [2, 2], 1], [6, [2, 2], 1]],
+                'conv_activation': 'relu',
+                "post_fcnet_hiddens": [256],
+                "post_fcnet_activation": 'relu',
+            },
+
             "twin_q": True,
             "policy_delay": 1,
             "smooth_target_policy": True,
@@ -61,25 +76,10 @@ try:
             "evaluation_interval": None,
             "evaluation_duration": 10,
 
-            "use_state_preprocessor": True,
-            "actor_hiddens": [128, 64],
-            "actor_hidden_activation": "relu",
-            "critic_hiddens": [128, 64],
-            "critic_hidden_activation": "relu",
-            "n_step": 1,
-
-            'model': {
-            'custom_model': 'augraph_model',
-            'conv_filters': [[36, [3, 3], 1], [18, [2, 2], 1], [6, [2, 2], 1]],
-            'conv_activation': 'relu',  # tune.grid_search(['relu','tanh']),
-            "post_fcnet_hiddens": [256],
-            "post_fcnet_activation": 'relu',  # tune.grid_search(['relu','tanh'])
-            },
-
             "explore": True,
             "exploration_config": {
                 "type": "GaussianNoise",
-                "random_timesteps": 5000,
+                "random_timesteps": 10000,
                 # Gaussian stddev of action noise for exploration.
                 "stddev": 0.05,
                 "initial_scale": 1.0,
@@ -91,20 +91,20 @@ try:
             "evaluation_config": {
                 "explore": False
             },
-            "buffer_size": 50000,
-            "replay_buffer_config": {
-                "type": "MultiAgentReplayBuffer",
-                "capacity": 50000,
-            },
+            "buffer_size": 10000,
+            # "replay_buffer_config": {
+            #     "type": "MultiAgentReplayBuffer",
+            #     "capacity": 20000,
+            # },
             "store_buffer_in_checkpoints": False,
             "prioritized_replay": True,
             "prioritized_replay_alpha": 0.6,
             "prioritized_replay_beta": 0.4,
             "prioritized_replay_eps": 1e-4,
             "compress_observations": False,
-
             "training_intensity": None,
-            "critic_lr": 3e-4,
+
+            "critic_lr": 1e-4,
             "actor_lr": 1e-4,
             "target_network_update_freq": 3000,
             "tau": 0.001,
@@ -121,12 +121,11 @@ try:
             "num_workers": 0,
             "worker_side_prioritization": False,
             "min_time_s_per_reporting": 1,
-            "_disable_execution_plan_api": False,
         },
         checkpoint_at_end=True,
         checkpoint_freq=1,
         stop={
-            'training_iteration': 400
+            'training_iteration': 500
         }
     )
 

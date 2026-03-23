@@ -111,7 +111,7 @@ tunerun = tune.run(
         # cl是al的0.1-1倍
         # Learning rate for the critic (Q-function) optimizer.
         # 'critic_lr': tune.grid_search([1e-4, 5e-5]),
-        'critic_lr': 1e-4,  # 3e-4
+        'critic_lr': 3e-4,
         # Learning rate for the actor (policy) optimizer.
         # 'actor_lr': tune.grid_search([1e-4, 5e-5]),
         'actor_lr': 1e-4,
@@ -156,10 +156,9 @@ tunerun = tune.run(
     # 隔几个training_iteration存储一次
     # restore=path #载入检查点
     stop={
-        'training_iteration': 300  # 训练轮次
+        'training_iteration': 350  # 训练轮次
     }
 )
-
 
 # 保存一个最大的训练好的agent
 best_checkpoint = tunerun.get_best_checkpoint(
