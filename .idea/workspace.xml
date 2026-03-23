@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae292e6-2c6c-47fc-8cae-dc2b7cf28a4a" name="Default Changelist" comment="Default Changelist">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuGraph_ddpg.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuGraph_ddpg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuGraph_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuGraph_env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuGraph_td3.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuGraph_td3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database.py" afterDir="false" />
-    </list>
+    <list default="true" id="dae292e6-2c6c-47fc-8cae-dc2b7cf28a4a" name="Default Changelist" comment="Default Changelist" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,7 +224,7 @@
       <workItem from="1732785026292" duration="75000" />
       <workItem from="1747900824356" duration="7483000" />
       <workItem from="1748250144873" duration="822000" />
-      <workItem from="1773784058121" duration="35157000" />
+      <workItem from="1773784058121" duration="35160000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <option name="closed" value="true" />
@@ -247,6 +239,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Default Changelist" />
